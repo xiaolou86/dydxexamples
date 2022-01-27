@@ -9,6 +9,10 @@ import subprocess
 import sys
 import time
 
+#script takes 2 optional parameters (example): python3 dydxhistory.py 2021-12-01T00:00:00.000Z 2022-01-20T00:00:00.000Z
+#parameter #1: start date/time (if not specified, default is 7 days ago)
+#parameter #2: end date/time (if not specified, default is now)
+
 ########################## YOU FILL THIS OUT #################
 _api_key='<FILL_THIS_OUT>'
 _api_secret='<FILL_THIS_OUT>'
