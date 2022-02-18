@@ -39,6 +39,7 @@ else:
         client.stark_private_key = _stark_private_key
 
 public_x, public_y = private_key_to_public_key_pair_hex(stark_private_key)
+#Uncomment this block if you have never onboarded before
 #create_user_result = client.onboarding.create_user(
 #       stark_public_key=public_x,
 #       stark_public_key_y_coordinate=public_y,
@@ -52,3 +53,10 @@ print('_stark_private_key=\'' + stark_private_key + '\'')
 print('_eth_address=\'' + _eth_address + '\'')
 print('_stark_public_key=\'' + public_x + '\'')
 print('_stark_public_key_y_coordinate=\'' + public_y + '\'')
+#Uncomment this block to request free testnet tokens
+#request_testnet_tokens_results = client.private.request_testnet_tokens()
+#print(request_testnet_tokens_results.data)
+#print(request_testnet_tokens_results.headers)
+get_account_results = client.private.get_account()
+print(get_account_results.data)
+print(get_account_results.headers)
